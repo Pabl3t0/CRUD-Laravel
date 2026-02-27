@@ -7,6 +7,12 @@
 <div class="d-flex justify-content-center mb-3 mt-5">
     <a  href="{{ route('productos.create') }}" class="btn btn-primary ml-5">Nuevo Producto</a>
 </div>
+
+@if(session('success'))
+    <div  class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
 <table class="table table-striped table-bordered mt-5 ">
 
 <thead class="bg-primary text-white">
