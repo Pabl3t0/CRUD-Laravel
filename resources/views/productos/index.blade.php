@@ -5,7 +5,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<h1 class="text-center mt-5 align-self-center">Productos</h1>
+<h1 class="text-center mt-5 align-self-center">CRUD de Productos</h1>
 
 <div class="d-flex justify-content-center mb-3 mt-5">
     <a  href="{{ route('productos.create') }}" class="btn btn-primary ml-5">Nuevo Producto</a>
