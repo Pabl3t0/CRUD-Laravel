@@ -31,7 +31,10 @@
                             <th>Acciones</th>
                         </tr>
                     <tbody>
-                        @foreach ($productos as $producto)
+                        @php
+                            $productos = null;
+                        @endphp
+                        @forelse ($productos as $producto)
                             <tr></tr>
                                 <td>{{ $producto->id }}</td>
                                 <td>{{ $producto->nombre }}</td>
@@ -46,7 +49,13 @@
                                     </form>
                                 </td>
                             </tr>
-                        @endforeach
+                        
+                        @empty
+                            <tr>
+                                <td colspan="5" class="text-center">No hay productos registrados.</td>
+                            </tr>
+                        @endforelse
+                    </tbody>
                 </table>
         </div>
     </body>

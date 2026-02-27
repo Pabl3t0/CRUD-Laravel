@@ -35,7 +35,7 @@ class ProductoController extends Controller
         Producto::create($request->all());
 
         return redirect()->route('productos.index')
-                         ->with('success', 'Producto creado correctamente.');
+                        ->with('success', 'Producto creado correctamente.');
     }
 
     public function edit(Producto $producto)
@@ -55,13 +55,13 @@ class ProductoController extends Controller
         $producto->update($request->all());
 
         return redirect()->route('productos.index')
-                         ->with('success', 'Producto actualizado correctamente.');
+                        ->with('success', 'Producto actualizado correctamente.');
     }
 
     public function destroy(Producto $producto)
     {
         $producto->delete();
         return redirect()->route('productos.index')
-                         ->with('success', 'Producto eliminado correctamente.');
+                        ->with('success', 'Producto eliminado correctamente.');
     }
 }
